@@ -1,0 +1,27 @@
+.particle-bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.form-box {
+  height: 250px;
+  width: 250px;
+  margin: 250px auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(4, 4, 5, 0.116);
+  border-radius: 15%;
+  color: rgba(191, 117, 252, 0.671);
+  text-align: center;
+}
+
+.sub-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
