@@ -1,0 +1,27 @@
+{
+  "name": "planet-tracker",
+  "version": "1.0.0",
+  "description": "Sends notification from mailing list when new planet is found",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lisukod/planet-tracker.git"
+  },
+  "keywords": [
+    "planet",
+    "hunter",
+    "nasa"
+  ],
+  "author": "Krzysztof Śliwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lisukod/planet-tracker/issues"
+  },
+  "homepage": "https://github.com/Lisukod/planet-tracker#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

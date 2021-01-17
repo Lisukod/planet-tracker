@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/background-stars.css">
     <link rel="stylesheet" href="style/main.css">
-    <title>NASA</title>
+    <title>Planet Hunter</title>
 
 </head>
 <body>
@@ -13,11 +13,36 @@
     <div id="particles-js" class="particle-bg"></div>
     <div></div>
     <img src="media/hide.svg" alt="hide-ui-button" class="hide-ui" onClick="hideUi()" id="hide-ui-button">
+    <div class="info-box" id="info-box">
+        <div>
+            <img src="media/moon.png" alt="moon-png">
+            <p>LOREM IMPSUM</p>
+            <span>
+                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </span>
+        </div>
+        <div>
+            <img src="media/saturn.png" alt="saturn-png">
+            <p>LOREM IMPSUM</p>
+            <span>
+                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span> 
+        </div>
+        <div>
+            <img src="media/moon.png" alt="moon-png">
+                <p>LOREM IMPSUM</p>
+                <span>
+                    Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </span>
+        </div>
+    </div>
     <div class="form-box" id="form-box">
         <form action="" method="post" class="sub-form">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="form-email">
-            <button type="submit">Wyślij</button>
+            <div class="input-field">
+                <input type="text" name="email" id="form-email" required />
+                <label for="form-email">E-mail</label>
+            </div>
+            <button type="submit">SEND</button>
         </form>
     </div>
     
