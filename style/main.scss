@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    color: rgba(166, 166, 190, 0.911);
+    color: rgb(166, 166, 190);
     div{
         width: 300px;
         display: flex;
@@ -39,7 +39,7 @@
         }
     }
     img{
-        filter: invert(0.5);
+        filter: invert(0.85);
     }
 }
 
@@ -52,7 +52,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(4, 4, 5, 0.116);
     border-radius: 15%;
     color: rgba(191, 117, 252, 0.671);
     text-align: center;
@@ -77,7 +76,7 @@ label {
     left: 0;
     width: 90%;
     padding: 0 0.5rem;
-    color: #636363;
+    color: #5c5c5c;
     transition: 0.2s all;
     cursor: text;
     text-align: left;
@@ -88,7 +87,7 @@ input {
     border: 0;
     outline: 0;
     padding: 0.5rem 0.5rem;
-    border-bottom: 2px solid #d3d3d3;
+    background-color: #8fc7cf;
     box-shadow: none;
     color: #111;
 }
@@ -97,12 +96,8 @@ input:invalid {
     outline: 0;
 }
 
-input:focus, input:valid {
-    border-color: #00dd22;
-}
-
 input:focus~label, input:valid~label {
 font-size: 14px;
 top: -24px;
-color: #00dd22;
+color: #33bd47;
 }
