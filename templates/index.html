@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/background-stars.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background-stars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Planet Hunter</title>
 
 </head>
@@ -12,24 +12,24 @@
     <!-- particles.js container --> 
     <div id="particles-js" class="particle-bg"></div>
     <div></div>
-    <img src="media/hide.svg" alt="hide-ui-button" class="hide-ui" onClick="hideUi()" id="hide-ui-button">
+    <img src="{{ url_for('static', filename='media/hide.svg') }}" alt="hide-ui-button" class="hide-ui" onClick="hideUi()" id="hide-ui-button">
     <div class="info-box" id="info-box">
         <div>
-            <img src="media/moon.png" alt="moon-png">
+            <img src="{{ url_for('static', filename='media/moon.png') }}" alt="moon-png">
             <p>LOREM IMPSUM</p>
             <span>
                 Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </span>
         </div>
         <div>
-            <img src="media/saturn.png" alt="saturn-png">
+            <img src="{{ url_for('static', filename='media/saturn.png') }}" alt="saturn-png">
             <p>LOREM IMPSUM</p>
             <span>
                 Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span> 
         </div>
         <div>
-            <img src="media/moon.png" alt="moon-png">
+            <img src="{{ url_for('static', filename='media/moon.png') }}" alt="moon-png">
                 <p>LOREM IMPSUM</p>
                 <span>
                     Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="form-box" id="form-box">
-        <form action="" method="post" class="sub-form">
+        <form action="{{url_for('add_mail')}}" method="POST" class="sub-form">
             <div class="input-field">
                 <input type="text" name="email" id="form-email" required />
                 <label for="form-email">E-mail</label>
@@ -47,8 +47,8 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/background-stars.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{url_for('static', filename='js/background-stars.js') }}"></script>
+    <script src="{{url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 </html>
