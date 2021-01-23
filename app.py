@@ -8,6 +8,7 @@ from os.path import exists
 from pathlib import Path
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
+from itsdangerous import URLSafeSerializer, BadData
 
 
 app = Flask(__name__)
@@ -65,10 +66,15 @@ def notify_subs():
     for item in mailing_list:
         subscribers.append(item.adres)
     msg = Message(
-        "Hello", 
+        "New NASA discovery", 
         recipients=subscribers
     )
-    msg.body = db_data.explanation
+    msg.html = render_template("notify_mail.html",
+        explanation=db_data.explanation,
+        img=db_data.img,
+        title="NASA recent discovery",
+        # unsub_link="{}/{}".format(url_for("unsub_info"), db_data)
+        )
     mail.send(msg)
     db_data.sent = True
     return "Sent"
@@ -116,12 +122,19 @@ def add_mail():
     db.session.commit()
     return redirect(url_for("main_page"))
 
-@app.route("/unsubscribe/")
-def remove_mail():
-    email_adres = ""
-    db.session.remove(MailingList(adres=email_adres))
-    de.session.commit()
 
+@app.route("/unsubscribe/")
+def unsub_info():
+    return render_template(
+        "unsub.html",
+    )
+
+
+@app.route("/unsubscribe/rm/")
+def remove_mail():
+    email_token = request.args.get('token')
+    db.session.query(MailingList).filter_by(token=email_token).first().delete()
+    return redirect(url_for("unsub_info"))
 
 
 

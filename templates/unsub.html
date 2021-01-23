@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background-stars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Planet Hunter</title>
+
+</head>
+<body>
+    <!-- particles.js container --> 
+    <div id="particles-js" class="particle-bg"></div>
+    <div></div>
+    <img src="{{ url_for('static', filename='media/hide.svg') }}" alt="hide-ui-button" class="hide-ui" onClick="hideUi()" id="hide-ui-button">
+    <div class="info-box" id="info-box">
+        <div>
+            <img src="{{ url_for('static', filename='media/saturn.png') }}" alt="saturn-png">
+            <p>WE ARE SORRY FOR YOUR LEAVE</p>
+            <span>
+                We hope you will join us again in our exploration of stars.
+            </span> 
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{{url_for('static', filename='js/background-stars.js') }}"></script>
+    <script src="{{url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
